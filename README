@@ -1,4 +1,4 @@
-In the 7.07 Dueling Fates update for Dota 2, a new feature was added.
+In the 7.07 Dueling Fates update for Dota 2, a new feature was added:
 
 * Each day 10 heroes are selected automatically as bonus heroes for the day. Bonus heroes provide you with a free mango on selection (cannot be sold).
 
@@ -12,7 +12,7 @@ Files:
 * build.sh - command to build the program
 * heroes.h - hero names ordered by hero ID
 * README - you're reading it
-* vstdlib.dll - Dota 2 library from game/bin/win64 used for its PRNG
+* vstdlib.dll/tier0.dll - Dota 2 library from game/bin/win64 used for its PRNG
 
 Technical details:
 
@@ -21,3 +21,7 @@ This PRNG is then used to generate numbers between 0 and 114, until 10 different
 Each number n selects the hero with the nth hero ID (see game/dota/scripts/npc/npc_heroes.txt).
 
 Until 1 November, due to a bug the selected heroes were cempletely random every game on Valve servers.
+Between 6 November and 5 December there was a bug that caused the bonus heroes to not match the list and sometimes generate only 9 heroes.
+On 1 March, 7.10 was released:
+
+* Bonus hero count increased from 10 to 12
