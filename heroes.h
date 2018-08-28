@@ -115,4 +115,5 @@ const char *heroes[] = {
     "monkey king",
     "dark willow",
     "pangolier",
+    "grimstroke",
 };
