@@ -34,7 +34,7 @@ int main() {
 
 	for(int j = 0; j < nbonus; j++) {
 	retry:;
-	    int64_t b = randomint(&s, 0, 114);
+	    int64_t b = randomint(&s, 0, 115);
 	    for(int k = 0; k < j; k++) {
 	        if(bonus[k] == b) goto retry;
 	    }
