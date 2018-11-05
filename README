@@ -2,7 +2,8 @@ In the 7.07 Dueling Fates update for Dota 2, a new feature was added:
 
 * Each day 10 heroes are selected automatically as bonus heroes for the day. Bonus heroes provide you with a free mango on selection (cannot be sold).
 
-This command line program generates the bonus heroes for each day.
+This command line program outputs the bonus heroes for each day.
+(Dota 2 uses its own implementation. I'm not a Valve employee.)
 
 Files:
 
