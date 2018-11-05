@@ -25,6 +25,9 @@ int main() {
     void (*randomstream)(STREAM *stream) = (void *)GetProcAddress(vstdlib, "??0CUniformRandomStream@@QEAA@XZ");
 
     for(uint64_t i = START_DATE; i < END_DATE; i++) {
+        int nheroes = 114;
+        if(i >= 0x4567) nheroes++; // 2018-08-24 grimstroke
+
         STREAM s;
 	randomstream(&s);
 	setseed(&s, i);
@@ -34,7 +37,7 @@ int main() {
 
 	for(int j = 0; j < nbonus; j++) {
 	retry:;
-	    int64_t b = randomint(&s, 0, 115);
+	    int64_t b = randomint(&s, 0, nheroes);
 	    for(int k = 0; k < j; k++) {
 	        if(bonus[k] == b) goto retry;
 	    }
